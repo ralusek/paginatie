@@ -1,0 +1,52 @@
+{
+  "name": "paginatie",
+  "version": "0.0.0",
+  "description": "A tool for managing pagination forwards and backwards through infinite data sets.",
+  "keywords": [
+    "pagination",
+    "paginate",
+    "head",
+    "tail",
+    "infinite",
+    "stream",
+    "slide",
+    "sliding",
+    "window"
+  ],
+  "author": "Tomas Savigliano",
+  "license": "MIT",
+  "main": "./lib/index.js",
+  "files": [
+    "/lib"
+  ],
+  "scripts": {
+    "build": "npx ttsc",
+    "start": "npm run build",
+    "test": "npm run build && mocha -r ts-node/register tests/**/*.test.ts",
+    "prettify": "npx prettier --write '**/*.ts'"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged && npm run build"
+    }
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/chai": "^4.2.15",
+    "@types/mocha": "^8.2.2",
+    "@types/node": "^14.14.37",
+    "@types/uuid": "^8.3.0",
+    "chai": "^4.3.4",
+    "husky": "^6.0.0",
+    "mocha": "^8.3.2",
+    "prettier": "^2.2.1",
+    "pretty-quick": "^3.1.0",
+    "ts-node": "^9.1.1",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-plugin-prettier": "^2.3.0",
+    "ttypescript": "^1.5.12",
+    "typescript": "^4.2.3",
+    "typescript-transform-paths": "^2.2.3"
+  }
+}
